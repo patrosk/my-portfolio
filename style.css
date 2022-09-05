@@ -1,9 +1,9 @@
 :root {
   /* Color */
-  --bg-primary: #fff0f0;
-  --bg-secondary: #1a0d2f;
-  --accent: #ff6363;
-  --accent-dark: #840808;
+  --bg-primary: #f58115;
+  --bg-secondary: #fbc5a4;
+  --accent: #cb4700;
+  --accent-dark: #70008a;
   --text: #534646;
   /* Font size */
   --size: 16px;
@@ -24,7 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 100px;
+  height: 7rem;
   background-color: var(--bg-secondary);
   z-index: 2;
   position: fixed;
@@ -40,8 +40,21 @@ nav li {
 }
 nav a {
   text-decoration: none;
-  color: #ff6363;
+  color: var(--accent);
 }
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+.logo img {
+  width: 4.5rem;
+}
+
+/* DROPDOWN MENU */
 .dropdown-button {
   border: none;
   background-color: transparent;
@@ -106,6 +119,9 @@ nav a {
   right: 0;
   z-index: 1;
 }
+.hamburger:hover {
+  cursor: pointer;
+}
 .dropdown-content {
   padding: 35px;
   padding-top: 0;
@@ -125,77 +141,145 @@ nav a {
 .menu-desktop {
   display: none;
 }
-.logo {
-  width: 100px;
-  padding-left: 20px;
-}
-.logo img {
-  width: 100%;
-  padding-left: 10px;
+.menu-desktop ul {
+  display: flex;
+  padding-right: 2rem;
 }
 
 /* MAIN */
 main {
-  padding: 30px;
+  padding: 7rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h1 {
-  color: var(--accent);
+  color: var(--bg-secondary);
+  text-align: center;
+  margin-bottom: 0;
+}
+h2 {
+  color: var(--bg-secondary);
+  text-align: center;
   text-transform: uppercase;
+  font-size: 1rem;
 }
-h2,
 h3 {
-  color: var(--accent-dark);
+  text-align: center;
+  margin-top: 0.5rem;
 }
-h3 em {
-  color: var(--accent);
-  font-weight: 300;
-}
-.hero {
-  width: 100%;
-  margin-top: 100px;
-}
-.img-text {
-  font-size: 0.75rem;
+h4 {
+  text-align: center;
   margin: 0;
-  text-align: end;
-  padding-right: 10px;
 }
-article {
-  text-align: justify;
+main img {
+  width: 100%;
 }
-.info {
-  text-align: justify;
-  font-size: 1.1rem;
+.more-desktop {
+  display: none;
 }
-.spotify-link {
+
+/* PORTFOLIO SECTION */
+.portfolio {
+  margin-top: 3rem;
+}
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-h2 a {
-  text-align: end;
-  color: #ff6363;
+.card a {
   text-decoration: none;
-  animation: animate 2.5s linear infinite;
+  text-align: center;
 }
-@keyframes animate {
-  0% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.3;
-  }
+.card {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.card-info {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--bg-secondary);
+  padding: 0 0.5rem 0.09rem;
+  transition: 0.5s ease;
+  /* background-color: var(--bg-secondary); */
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.card h4 {
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--bg-secondary);
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.img-container {
+  overflow: hidden;
+}
+.card img {
+  transition: 0.5s ease;
+}
+.card:hover img {
+  transform: scale(1.2);
+}
+.card:hover .card-info {
+  display: flex;
+}
+/* FOOTER */
+footer {
+  height: 7rem;
+  background-color: var(--bg-secondary);
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+}
+footer img {
+  width: 2rem;
+}
+footer p {
+  text-align: center;
+  margin: 0;
 }
 
+/* MEDIA QUERIES */
 @media screen and (min-width: 750px) {
   .dropdown {
     display: none;
   }
   .menu-desktop {
-    display: inline;
+    display: flex;
+  }
+  .introduction {
+    display: flex;
+    flex-direction: row;
+  }
+  .more-desktop {
+    display: block;
+  }
+  .more-mobile {
+    display: none;
+  }
+  .introduction img {
+    width: 50%;
+  }
+  .introduction .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    max-width: 40%;
   }
 }
