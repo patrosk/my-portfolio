@@ -25,18 +25,18 @@
             </span>
           </button>
           <ul class="dropdown-content">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
         <!-- DESKTOP MENU -->
         <div class="menu-desktop">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#more-desktop">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -48,7 +48,7 @@
         <div class="introduction-text">
           <h1>Hey! My name is nema</h1>
           <h3>and I'm a developer</h3>
-          <h4 class="more-desktop">Front end | Back end</h4>
+          <h4 id="more-desktop" class="more-desktop">Front end | Back end</h4>
           <p class="more-desktop">
             I'm a curious and ambitious full-stack developer that loves
             problem-solving and creative solutions. Web developer graduate in
@@ -57,7 +57,15 @@
           </p>
         </div>
         <img src="./images/nema.jpeg" alt="" />
-        <h4 class="more-mobile">more about me</h4>
+        <div id="about">
+          <h4 class="more-mobile">more about me</h4>
+          <p class="more-mobile">
+            I'm a curious and ambitious full-stack developer that loves
+            problem-solving and creative solutions. Web developer graduate in
+            June 2023. Passionate about gender issues, sustainability and
+            music."
+          </p>
+        </div>
       </section>
 
       <section class="portfolio">
@@ -177,23 +185,29 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="contact-container">
           <h4>Want to get in touch?</h4>
           <p>Just drop me a line and I'll get back to you ASAP!</p>
           <ul>
             <li>
+              <img src="/images/mail.png" />
               <a href="mailto:nemaproblema2.0@gmail.com"
                 >nemaproblema2.0@gmail.com</a
               >
             </li>
             <li>
+              <img src="/images/github.png" />
               <a href="https://github.com/patrosk">github.com/patrosk</a>
             </li>
             <li>
+              <img src="/images/instagram.png" />
               <a href="https://www.instagram.com/nemacamille"> @nemacamille </a>
             </li>
           </ul>
+          <div class="back-to-top">
+            <a href="#">Back to top</a>
+          </div>
         </div>
       </section>
     </main>
