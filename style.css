@@ -187,6 +187,20 @@ main img {
 .more-desktop {
   display: none;
 }
+.more-mobile {
+  padding-top: 7rem;
+  margin-top: -7rem;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+.more-mobile-h4 {
+  margin-top: 3rem;
+  transition: 0.5s ease;
+}
+.more-mobile-p {
+  padding: 1rem 2rem 2rem;
+  transition: 0.5s ease;
+}
 
 /* PORTFOLIO SECTION */
 .portfolio {
@@ -325,7 +339,9 @@ footer p {
   .more-desktop h4 {
     margin-top: 3rem;
   }
-  .more-mobile {
+  .more-mobile,
+  .more-mobile-h4,
+  .more-mobile-p {
     display: none;
   }
   .introduction img {
